@@ -1,0 +1,32 @@
+/* @import './base.css'; */
+@import 'normalize.css';
+/* @import 'mixins.css'; */
+
+body {
+  touch-action: none;
+}
+
+.parting {
+  box-sizing: border-box;
+  border: 1px solid var(--normal-color);
+}
+
+#app {
+  color: var(--normal-color);
+  transition: color 0.5s ease-in;
+  transition: border-color 0.5s ease-out;
+  & ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    word-break: break-word;
+    & li {
+      width: 30%;
+      text-align: center;
+      border: 1px solid var(--normal-color);
+      @mixin ellipsis;
+    }
+  }
+}
